@@ -1,0 +1,37 @@
+body{
+  display: flex;
+  font-family: Arial,sans-serif;
+  height: 100px;
+}
+@media screen and (min-width: 800px) {
+  body{
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 320px) {
+  body{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  #dayNight,#time{
+    flex-direction: row;
+  }
+}
+div{
+  flex-grow: 1;
+}
+#dayNight{
+  background: lightgrey;
+
+}
+#amPm{
+  text-align: center;
+  position: relative;
+}
+#time{
+  background: Lightblue;
+}
+#date{
+  background: lightcoral;
+}
