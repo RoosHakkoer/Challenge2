@@ -1,37 +1,58 @@
 body{
   display: flex;
   font-family: Arial,sans-serif;
-  height: 100px;
+  font-size: 30px;
+  color: white;
+  background:  white;/*#a7a9ac; #005288;*/
 }
 @media screen and (min-width: 800px) {
   body{
     flex-direction: row;
+  }
+  div{width:33%;
+  }
+}
+@media screen and (max-width: 800px) {
+  body{
+    flex-direction: column;
+  }
+  #dayNight,#time{ /*deze 2 moeten naast elkaar*/
+    flex-direction: row;
+    width: 50%;
+  }
+  #date{
+    width: 100%
   }
 }
 @media screen and (max-width: 320px) {
   body{
     flex-direction: column;
   }
-}
-@media screen and (max-width: 800px) {
   #dayNight,#time{
-    flex-direction: row;
+    width: 100%;
   }
 }
+
 div{
   flex-grow: 1;
+  height: 150px;
+  background: white;
+  border-radius: 2px 20px 20px 20px;
+  margin: 5px;
 }
 #dayNight{
-  background: lightgrey;
-
+  background: #30383B;
 }
-#amPm{
+#time{
+  background:#005288;
+}
+#date{
+  background: #30383B;
+}
+#amPm, #realtime, #realdate{
   text-align: center;
   position: relative;
 }
-#time{
-  background: Lightblue;
-}
-#date{
-  background: lightcoral;
+#amPm{
+  text-indent: -400px;
 }
