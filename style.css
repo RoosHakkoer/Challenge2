@@ -12,12 +12,11 @@ body{
   div{width:33%;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) { /*PM en tijd moeten naast elkaar, datum moet eronder*/
   body{
-    flex-direction: column;
+    flex-flow: row wrap;
   }
   #dayNight,#time{ /*deze 2 moeten naast elkaar*/
-    flex-direction: row;
     width: 50%;
   }
   #date{
