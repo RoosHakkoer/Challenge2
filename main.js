@@ -7,14 +7,15 @@ function animatePMAM() {
 	if(time > 12 && time < 24) {
 
 		// if noon animate
-		if (time > 12 && time < 24) {
+		if (time > 12 ) {
 			//timeline.to('#amPm', 1, { left: -100});
 			// Slomo animation
 			TweenLite.to('#amPm', 2.5, { ease: Elastic.easeOut.config(1, 0.3), x: 200 });
 		}
 
-		document.getElementById('amPm').innerHTML = 'PM';
+			document.getElementById('amPm').innerHTML = 'PM';
 	 }  else {
+		 TweenLite.to('#amPm', 2.5, { ease: Elastic.easeOut.config(1, 0.3), x: 200 });
 		document.getElementById('amPm').innerHTML = 'AM';
 	}
 }
